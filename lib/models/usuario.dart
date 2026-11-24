@@ -4,14 +4,14 @@ class Usuario {
   final String usuario;
   final String fechaRegistro; // ISO 8601
   final String email;
-  final String contraseña; // hash SHA-256, nunca la contraseña en claro
+  final String contrasena; // hash SHA-256, nunca la contraseña en claro
 
   const Usuario({
     this.id,
     required this.usuario,
     required this.fechaRegistro,
     required this.email,
-    required this.contraseña,
+    required this.contrasena,
   });
 
   Map<String, Object?> toMap() => {
@@ -19,7 +19,7 @@ class Usuario {
         'usuario': usuario,
         'fecha_registro': fechaRegistro,
         'email': email,
-        'contraseña': contraseña,
+        'contrasena': contrasena,
       };
 
   factory Usuario.fromMap(Map<String, Object?> map) => Usuario(
@@ -27,6 +27,6 @@ class Usuario {
         usuario: map['usuario'] as String,
         fechaRegistro: map['fecha_registro'] as String,
         email: map['email'] as String,
-        contraseña: map['contraseña'] as String,
+        contrasena: map['contrasena'] as String,
       );
 }
