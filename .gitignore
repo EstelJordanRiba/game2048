@@ -46,3 +46,6 @@ app.*.map.json
 
 # Widget Preview related
 .widget_preview/
+
+# Lockfile fuera del repo: el grupo usa versiones distintas de Flutter
+pubspec.lock
