@@ -16,7 +16,11 @@ flutter run          # emulador o dispositivo Android / iOS
 flutter test         # tests de la lógica del juego
 ```
 
-> sqflite no funciona en web sin configuración adicional: usar Android, iOS o escritorio.
+> sqflite no funciona en web ni en Windows/Linux sin configuración adicional: usar Android (emulador o móvil) o iOS.
+>
+> Las carpetas `windows/` y `linux/` se han quitado a propósito: en Windows, Flutter crea symlinks para los plugins de esas plataformas y obliga a activar el Modo de desarrollador. Para Android no hacen falta.
+>
+> `pubspec.lock` no se sube al repo para que cada uno resuelva las dependencias con su versión de Flutter (probado con Flutter 3.44.3 / Dart 3.12).
 
 ## Estructura del proyecto
 
